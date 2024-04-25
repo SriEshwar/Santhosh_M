@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script>
+        // Using var
+        var x = 10;
+
+        function varExample() {
+            if (true) {
+                var y = 20;
+            }
+            console.log("x inside function:", x); // Accessible
+            console.log("y inside function:", y); // Accessible due to hoisting
+        }
+        
+        // Using let
+        let a = 30;
+
+        function letExample() {
+            if (true) {
+                let b = 40;
+            }
+            console.log("a inside function:", a); // Accessible
+            // console.log("b inside function:", b); // Not accessible
+        }
+
+        // Accessing variables outside functions
+        console.log("x outside function:", x); // Accessible
+        // console.log("y outside function:", y); // Not accessible
+        console.log("a outside function:", a); // Accessible
+        // console.log("b outside function:", b); //Not accesible
+    </script>
+</head>
+<body>
+    <h1>var vs let Example</h1>
+
+    <button onclick="varExample()">Run var Example</button>
+    <button onclick="letExample()">Run let Example</button>
+</body>
+</html>
+
